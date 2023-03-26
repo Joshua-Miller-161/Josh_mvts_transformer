@@ -34,7 +34,7 @@ from models.ts_transformer import model_factory
 from models.loss import get_loss_module
 from optimizers import get_optimizer
 
-print('Hi')
+print('Fuck you')
 def main(config):
 
     total_epoch_time = 0
