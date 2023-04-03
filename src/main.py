@@ -67,6 +67,7 @@ def main(config):
     
     feat_dim = my_data.feature_df.shape[1]  # dimensionality of data features
     print(' ~~~~~~~~ feat_dim =', my_data.feature_df.shape[1], ', my_data.feature_df.shape =', my_data.feature_df.shape)
+    print(' ~~~~~~~~ my_data.feature_df.head() =', my_data.feature_df.head())
     if config['task'] == 'classification':
         validation_method = 'StratifiedShuffleSplit'
         labels = my_data.labels_df.values.flatten()
