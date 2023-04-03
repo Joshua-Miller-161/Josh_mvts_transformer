@@ -33,6 +33,7 @@ from datasets.datasplit import split_dataset
 from models.ts_transformer import model_factory
 from models.loss import get_loss_module
 from optimizers import get_optimizer
+import numpy as np
 
 
 def main(config):
@@ -59,6 +60,12 @@ def main(config):
     logger.info("Loading and preprocessing data ...")
     data_class = data_factory[config['data_class']]
     my_data = data_class(config['data_dir'], pattern=config['pattern'], n_proc=config['n_proc'], limit_size=config['limit_size'], config=config)
+    
+    # Print data info
+    print(' ~~~~~~~~ type(data_class) :', type(data_class), ', type(my_data) :', type(my_data))
+    print(' ~~~~~~~~ np.shape(my_data) :', np.shape(my_data))
+
+    
     feat_dim = my_data.feature_df.shape[1]  # dimensionality of data features
     if config['task'] == 'classification':
         validation_method = 'StratifiedShuffleSplit'
