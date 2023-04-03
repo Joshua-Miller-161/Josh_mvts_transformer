@@ -36,7 +36,6 @@ from optimizers import get_optimizer
 
 
 def main(config):
-
     total_epoch_time = 0
     total_eval_time = 0
 
