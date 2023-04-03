@@ -63,7 +63,6 @@ def main(config):
     
     # Print data info
     print(' ~~~~~~~~ type(data_class) :', type(data_class), ', type(my_data) :', type(my_data))
-    print(' ~~~~~~~~ np.shape(my_data) :', my_data.shape)
 
     
     feat_dim = my_data.feature_df.shape[1]  # dimensionality of data features
